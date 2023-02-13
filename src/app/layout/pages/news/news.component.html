@@ -1,0 +1,21 @@
+<div class="container" style="min-height: 88.4vh;">
+    <div class="left">
+        <div class="header-container">
+            <h2>Novelties and new books</h2>
+            <h3>In <strong>Bookstore</strong></h3>
+        </div>
+    </div>
+    <div class="right">
+        <div class="item-container">
+            <div *ngFor="let book of newBooks" class="item">
+                <p-card header={{book.title}} subheader="De: {{book.author}}"
+                    [style]="{'width': '15rem', 'margin-top': '2em', 'height': '17rem'}"
+                    >
+                    <div class="wrap-text">Pages: {{book.pages}}</div>
+                    <div>Stock: {{book.stock}}</div>
+                </p-card>
+            </div>
+        </div>
+
+    </div>
+</div>
